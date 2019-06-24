@@ -4,10 +4,8 @@ Created on Tue Jun 18 16:00:04 2019
 
 @author: Hashim
 """
-
+###
 '''Task 2'''
-#
-
 class VideoApp:
     participants_online = 0
     action = ["speaking" "silent"]
@@ -50,12 +48,12 @@ class ChatApp(VideoApp, Message):     ###Inhertitence
     def __init__(self):
         super(ChatApp, self).__init__()
         Message.__status__(self)   ###instance
-                
+###                
 
 
 
+###
 '''Task 3'''
-
 class Compare():
     def __new__(cls, *args, **kwargs):
         print("We are comparing string lengths.")
@@ -74,9 +72,10 @@ class Compare():
 a = Compare('ello')
 b = Compare('Hi')
 print(a==b)
+###
 
 
-
+###
 ''' Task 4'''
 
 #from collections import namedtuple
@@ -88,7 +87,6 @@ print(a==b)
 #    def __init__(self):
        
 '''useful link https://pymotw.com/2/collections/namedtuple.html'''
-
 
 from collections import namedtuple
 class PersonalJoiner:
@@ -107,7 +105,6 @@ person_features = namedtuple('person_features', 'eye_colour IQ_score')
 person_1_features = person_features(eye_colour = 'green', IQ_score = 109)
 person_ = PersonalJoiner()
 print(PersonalJoiner.join_(person_1_details, person_1_features))
-
 
 from collections import namedtuple
 PersonalDetails = namedtuple('PersonalDetails', ['date_of_birth'])
@@ -130,18 +127,9 @@ class PersonalJoiner:
 
 person_= PersonalJoiner()
 print(PersonalJoiner.join_(person_1_detail, person_1_features))
+###
 
-
-m = {"k":"a" , "l":"b"}
-#n = {"k":"c" , "l":"d"}
-def meth(k={}, l={}):
-    return k,l
-meth(*m)
-#meth(**m, **n)    #Unpacking of all the dictionary parameters
-#meth(*m, *n)
-#meth(m,n)
-
-
+###
 '''Task5'''
 
 def double(ip_funct):
@@ -163,7 +151,7 @@ def ip_funct():
         list.append(x)
     print (list)
 ip_funct()
-
+###
 
 
 
@@ -184,10 +172,11 @@ def verify(ip_funct):
 def ip_funct():
     print ("The function is being called properly here.")
 ip_funct()
-          
+###
+        
 
-
-
+###
+'''Alari given task, to print either the keys or values in a dictionary'''
 kw= {'a':5.5}
 def ttry( b=2, *arg, **kw):
     if 'a'in kw:
@@ -195,6 +184,17 @@ def ttry( b=2, *arg, **kw):
     return a
 ttry(b=kw)
 ttry(**{'d':2})
+###
+
+###
+m = {"k":"a" , "l":"b"}
+#n = {"k":"c" , "l":"d"}
+def meth(k={}, l={}):
+    return k,l
+meth(*m)
+#meth(**m, **n)    #Unpacking of all the dictionary parameters
+#meth(*m, *n)
+#meth(m,n)
 #ttry([1,2], kw)
 #ttry(a=2, *[1,2], kw)
 #ttry(*[1,2])
@@ -204,7 +204,7 @@ ttry(**{'d':2})
 #    def __init__(self, stringg):
 #        self.stringg = stringg
         
-        
+ ###       
         
 class Foo(object):
     def __new__(cls, *args, **kwargs):
@@ -219,10 +219,3 @@ class Foo(object):
     def bar(self):
         pass
 i =Foo(2,3)
-
-
-        
-        
-        
-        
-        
